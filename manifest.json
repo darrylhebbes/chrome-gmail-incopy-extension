@@ -1,0 +1,19 @@
+{
+    "name": "Gmail CC Viewer",
+    "description": "Gmail CC Viewer",
+    "manifest_version": 2,
+    "version": "0.3.7",
+    "permissions": [
+        "https://mail.google.com/mail/*"
+    ],
+    "web_accessible_resources": [
+        "vendor/jquery-2.2.4.min.js"
+    ],    
+    "content_scripts": [
+        {
+            "matches": ["https://mail.google.com/mail/*"],
+            "js": ["vendor/jquery-2.2.4.min.js", "app.js"],
+            "run_at": "document_end"
+        }
+    ]    
+}
